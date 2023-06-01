@@ -1,0 +1,56 @@
+
+.cube {
+    width: 600px;
+    height: 600px;
+  
+    animation: rotate 30s infinite alternate;
+    transform-style: preserve-3d;
+  }
+  
+  .face {
+    background: linear-gradient(45deg, #16193b75, #35469c73 );
+    border: 2px solid #0f001f;
+  
+    width: 600px;
+    height: 600px;
+    position: absolute;
+  }
+  
+  .face--front {
+    transform: translateZ(300px);
+    
+  }
+  
+  .face--right {
+    transform: rotateY(90deg) translateZ(300px);
+  }
+  
+  .face--back {
+    transform: rotateY(180deg) translateZ(300px);
+  }
+  
+  .face--left {
+    transform: rotateY(-90deg) translateZ(300px);
+  }
+  
+  .face--top {
+    transform: rotateX(90deg) translateZ(300px);
+  }
+  
+  .face--bottom {
+    transform: rotateX(-90deg) translateZ(300px);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotateX(-20deg) rotateY(-10deg);
+    }
+  
+    50% {
+      transform: rotateX(20deg) rotateY(320deg);
+    }
+  
+    to {
+      transform: rotateX(-20deg) rotateY(-20deg);
+    }
+  }
